@@ -16,7 +16,7 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
-.container {
+main {
   height: 100vh;
   display: flex;
   flex-direction: column;
