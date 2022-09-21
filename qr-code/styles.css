@@ -59,14 +59,3 @@ h1 {
   font-size: 15px;
   font-weight: 400;
 }
-
-/* start of attribution section */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  display: block;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
