@@ -1,0 +1,162 @@
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+
+:root {
+  --clr-primary-soft-blue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl(178, 100%, 50%);
+  --clr-primary-cyan-hover: hsla(178, 100%, 50%, 0.432);
+  --clr-ntrl-main: hsl(217, 54%, 11%);
+  --clr-ntrl-card-bg: hsl(216, 50%, 16%);
+  --clr-ntrl-white: hsl(0, 0%, 100%);
+  /* Font size (paragraph) */
+  --fs-base: 1.6rem;
+  /* font family */
+  --ff-base: 'Outfit', sans-serif;
+  --fs-h2: 2.2rem;
+}
+
+body {
+  font-size: var(--fs-base);
+  font-family: var(--ff-base);
+  color: var(--clr-primary-soft-blue);
+  font-weight: 300;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-ntrl-white);
+}
+
+main {
+  background-color: var(--clr-ntrl-main);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  width: 32.6rem;
+  height: 54.2rem;
+  padding: 2.4rem;
+  background-color: var(--clr-ntrl-card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+
+/* start of equilibrium image section */
+
+/* Applying a relative position to the container gives the absolute element (.view-icon) a boundary */
+.card-img {
+  position: relative;
+}
+
+.equi {
+  /* fit to its parent element */
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.view-icon {
+  position: absolute;
+  background-color: var(--clr-primary-cyan-hover);
+  border-radius: 1rem;
+  padding: 42% 41% 41%;
+  opacity: 0;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transition: .5s ease;
+}
+
+.view-icon:hover {
+  opacity: 1;
+}
+
+/* end of equilibrium image section */
+
+/* start of card content section */
+
+.card-body {
+  height: 50%;
+  margin-top: 2rem;
+}
+
+.desc-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: var(--fs-h2);
+  margin-bottom: 1.3rem;
+}
+
+.card-desc {
+  line-height: 2.4rem;
+}
+
+.price-container {
+  margin: 2rem 0 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lining-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.lining-up p {
+  margin-left: 0.5rem;
+}
+
+.price {
+  color: var(--clr-primary-cyan);
+  font-weight: 700;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--clr-primary-soft-blue);
+  opacity: 0.3;
+}
+
+.profile-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3.3rem;
+}
+
+.profile-img {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 100%;
+  margin-right: 2rem;
+}
